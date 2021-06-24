@@ -179,7 +179,7 @@ nav ul li a{
     </form>
 			<div class="content">
                             <div id="image-map">
-				<img width="500" height="100" src="petasumatera.jpg" alt="Our Locations">  
+				<img width="500" height="100" src="petasumatra.jpg" alt="Our Locations">  
                                 <?php
                                 if($condition != "0")
                                 {
