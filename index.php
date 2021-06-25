@@ -64,6 +64,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    
     <title>Image Map By Taufik</title>
     <meta name="author" content="Codeconvey" />
     <meta charset="utf-8">
@@ -114,7 +115,7 @@ nav ul li a{
 	<div class="wrap">
 		
 		<div class="menu">
-                    <nav class="navecation">
+                    <nav class="">
 			<ul>
 				<li><a class="list active" href="index.php">PETA PERSEBARAN</a></li>
 				<li><a class="list" href="penjelasan.php">PENJELASAN</a></li>
@@ -122,16 +123,19 @@ nav ul li a{
 			</ul>
                     </nav>
 		</div>
-            
-            <div class="">
+         <div class="wrap2">   
+            <div class="menu2">
                     <nav class="">
 			<ul>
 				<li><a class="list active" href="index.php">MAP</a></li>
-				<li><a class="list" href="data.php?region=<?php echo $region; ?>&year=<?php echo $year; ?>&magnitudo=<?php echo $magnitudo; ?>">DATA</a></li>
-								
+                                <?php if($condition!=0)
+                                { ?>
+                                    <li><a class="list" href="data.php?region=<?php echo $region; ?>&year=<?php echo $year; ?>&magnitudo=<?php echo $magnitudo; ?>">DATA</a></li>
+                                <?php }?>			
 			</ul>
                     </nav>
 	    </div>
+         </div>
             
 		<div class="badan">			
 			<div class="sidebar">
@@ -141,7 +145,7 @@ nav ul li a{
                                         <li><select name="region">
                                             <option value="0">Choose Region</option>
                                             <?php 
-                                            $regionselect = mysqli_query($conn,"SELECT DISTINCT lokasi FROM location");
+                                            $regionselect = mysqli_query($conn,"SELECT * FROM location");
                                             while($regionresult = mysqli_fetch_array($regionselect)){?>
                                 
                                             <option value="<?php echo $regionresult['lokasi']; ?>"><?php echo $regionresult['lokasi']; ?></option>
