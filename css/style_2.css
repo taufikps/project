@@ -193,18 +193,18 @@ p, label {
 /*akhir menu*/
 
  .menu2{
-	background: blue;
+	background: #ffcccc;
 }
  
-.wrap2 .menu2 ul2{
+.wrap2 .menu2 ul{
 	padding: 0;
 	margin: 0;
-	background: blue;
+	background: #ffcccc;
 	overflow: hidden;
 }
  
-.wrap2 .menu2 ul2 li2{
-	float: right;
+.wrap2 .menu2 ul li{
+	float: left;
 	list-style-type: none;
 	padding: 10px;
 }
@@ -226,9 +226,13 @@ p, label {
 /*bagian sidebar*/
 .wrap .badan .sidebar{
 	background: orange;
-	float: right;	
+        position: absolute;
+        bottom: 40;
+        right: 0;
+        width: 200px;
+	left: 45%;
 	width: 25%;
-	height: 100%;
+	height: 75%;
 }
  
 /*akhir sidebar*/
@@ -236,8 +240,8 @@ p, label {
 .wrap .badan .content{
 	background: #fff1d3 ;
 	float: left;
-	height: 100%;
-	width: 75%;	
+	height: 90%;
+	width: 1%;	
 }
 
 .wrap2 .badan2 .content2{
