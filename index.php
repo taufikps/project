@@ -145,7 +145,7 @@ nav ul li a{
                                         <li><select name="region">
                                             <option value="0">Choose Region</option>
                                             <?php 
-                                            $regionselect = mysqli_query($conn,"SELECT * FROM location");
+                                            $regionselect = mysqli_query($conn,"SELECT DISTINCT lokasi FROM location");
                                             while($regionresult = mysqli_fetch_array($regionselect)){?>
                                 
                                             <option value="<?php echo $regionresult['lokasi']; ?>"><?php echo $regionresult['lokasi']; ?></option>
