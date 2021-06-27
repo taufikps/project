@@ -21,12 +21,13 @@
 .tooltip-up, .tooltip-down {
     position: absolute;
     background: url(https://i.imgur.com/13rZbuk.png);
-    width: 25px;
-    height: 37px;
+    background-size: 20px 35px;
+    width: 20px;
+    height: 18px;
 }
 
 .tooltip-down {
-    background-position: 0 -37px;
+    background-position: 0 -52px;
 }
 
 .tooltip {
@@ -250,4 +251,76 @@ p, label {
 .wrap .footer{
 	width: 100%;
 	padding: 10px;
+}
+
+
+
+
+.pin2 {
+    display: none;
+}
+
+/* Begin styling the tooltips and pins */
+.tooltip-up2, .tooltip-down2 {
+    position: absolute;
+    background: url(https://i.imgur.com/13rZbuk.png);
+    background-size: 20px 35px;
+    width: 20px;
+    height: 18px;
+}
+
+.tooltip-down2 {
+    background-position: 0 -52px;
+}
+
+.tooltip2 {
+    display: none;
+    width: 200px;
+    cursor: help;
+    text-shadow: 0 1px 0 #fff;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    z-index: 999;
+    margin-left: -10px;
+    padding:15px;
+    color: #222;
+    border-radius: 5px;
+    box-shadow: 0 3px 0 rgba(0,0,0,.7);
+    background: #fff1d3;
+    background: linear-gradient(top, #fff1d3, #ffdb90);         
+}
+
+.tooltip2::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    margin-left: -90px;
+    border-bottom: 10px solid #fff1d3;
+    border-left: 10px solid transparent;
+    border-right : 10px solid transparent;
+}
+
+.tooltip-down2 .tooltip2 {
+    bottom: 12px;
+    top: auto;
+}
+
+.tooltip-down2 .tooltip2::after {
+    bottom: -10px;
+    top: auto;
+    border-bottom: 0;
+    border-top: 10px solid #ffdb90;
+}
+
+.tooltip2 h2 {
+    font: bold 1.3em 'Trebuchet MS', Tahoma, Arial;
+    margin: 0 0 10px;
+}
+
+.tooltip2 ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
