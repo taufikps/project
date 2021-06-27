@@ -193,8 +193,8 @@ nav ul li a{
                                         {
 
                                             ?>
-
-                                           <div class="pin pin-down" data-xpos="<?php echo $mapresult['x']; ?>" data-ypos="<?php echo $mapresult['y']; ?>">  
+                                            
+                                           <div class="<?php if($mapresult['x']<200){ echo "pin pin-down2";}else{ echo "pin pin-down";} ?>" data-xpos="<?php echo $mapresult['x']; ?>" data-ypos="<?php echo $mapresult['y']; ?>">  
                                              <h2><?php echo $mapresult['lokasi']; ?></h2>     
                                              <ul>
                                                <li><?php echo $mapresult['magnitudo']; ?> Mw</li>
