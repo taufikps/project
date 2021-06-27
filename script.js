@@ -13,14 +13,19 @@ $(document).ready(function(){
         // set tooltip direction type - up or down             
         if ($(".pin").eq(i).hasClass('pin-down')) {
             tooltipDirection = 'tooltip-down';
+            
+             $("#image-map").append("<div style='left:"+$(".pin").eq(i).data('xpos')+"px;top:"+$(".pin").eq(i).data('ypos')+"px' class='" + tooltipDirection +"'>\
+                                            <div class='tooltip'>" + $(".pin").eq(i).html() + "</div>\
+                                    </div>");
         } else {
-            tooltipDirection = 'tooltip-up';
+            tooltipDirection = 'tooltip-down2';
+             $("#image-map").append("<div style='left:"+$(".pin").eq(i).data('xpos')+"px;top:"+$(".pin").eq(i).data('ypos')+"px' class='" + tooltipDirection +"'>\
+                                            <div class='tooltip2'>" + $(".pin").eq(i).html() + "</div>\
+                                    </div>");
             }
     
         // append the tooltip
-        $("#image-map").append("<div style='left:"+$(".pin").eq(i).data('xpos')+"px;top:"+$(".pin").eq(i).data('ypos')+"px' class='" + tooltipDirection +"'>\
-                                            <div class='tooltip'>" + $(".pin").eq(i).html() + "</div>\
-                                    </div>");
+       
     }    
     
     // show/hide the tooltip
@@ -28,5 +33,12 @@ $(document).ready(function(){
                 $(this).children('.tooltip').fadeIn(100);
             }).mouseleave(function(){
                 $(this).children('.tooltip').fadeOut(100);
+            })
+            
+            
+            $('.tooltip-up2, .tooltip-down2').mouseenter(function(){
+                $(this).children('.tooltip2').fadeIn(100);
+            }).mouseleave(function(){
+                $(this).children('.tooltip2').fadeOut(100);
             })
 });
